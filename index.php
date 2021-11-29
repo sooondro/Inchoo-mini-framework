@@ -34,5 +34,6 @@ $container['db'] = function ($c) {
 
 $app->get('/', [Test\Controllers\HomeController::class, 'index']);
 $app->get('/users', [new Test\Controllers\UserController($container->db), 'index']);
+$app->get('/user', [new Test\Controllers\UserController($container->db), 'index']);
 
 $app->run();
