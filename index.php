@@ -10,7 +10,9 @@ $container = $app->getContainer();
 
 $container['errorHandler'] = function () {
     return function ($response) {
-        return $response->setBody('Page not found test fdsafdsaaaaaaaaaaaaa')->withStatus(404);
+
+        return $response->setBody('Page test fdsafdsa')->withStatus(404);
+
     };
 };
 
