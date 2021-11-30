@@ -10,7 +10,9 @@ $container = $app->getContainer();
 
 $container['errorHandler'] = function () {
     return function ($response) {
+
         return $response->setBody('Page test fdsafdsa')->withStatus(404);
+
     };
 };
 
